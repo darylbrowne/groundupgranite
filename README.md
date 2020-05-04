@@ -57,6 +57,27 @@ The following core concepts constitute the foundation of development of all new 
 
 > **dictionary:** This concept is currently under reevaluation.
 
+
+
+### Setup
+
+- If you want more syntax highlighting, format your code like this:
+
+> update and install this package first
+
+```shell
+$ brew update
+$ brew install fvcproductions
+```
+
+> now install npm and bower packages
+
+```shell
+$ npm install
+$ bower install
+```
+
+
 ---
 
 ## Example (Optional)
