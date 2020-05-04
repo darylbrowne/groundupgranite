@@ -1,6 +1,6 @@
 # Granite.js
 
-![CI](https://github.com/darylbrowne/granite.js/workflows/CI/badge.svg) ![Generated Button](https://raw.githubusercontent.com/darylbrowne/granite.js/image-data/badge.svg)
+![CI](https://github.com/darylbrowne/granite.js/workflows/CI/badge.svg) ![Generated Button](https://raw.githubusercontent.com/darylbrowne/granite.js/image-data/badge.svg) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)]
 
 Granite.js is a front-end component library for rendering formatted JSON as PWA-ready DOM elements.
 
