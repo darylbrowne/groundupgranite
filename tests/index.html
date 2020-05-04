@@ -1,0 +1,13 @@
+<html>
+<script>
+import('https://darylbrowne.github.io/granite.js/js/tile.mjs')
+.then(module => {
+    let json = {'hello' : 'world'};
+    module.tile(json);
+})
+.catch(err => {
+    document.write(err.message);
+})
+.finally(function() { console.log('all done. clean up.'); });    
+</script>
+</html>
