@@ -1,10 +1,10 @@
-#trying
+#still trying
 name: release
 
 on:
   push:
     branches:
-      - other
+      - release
 
 jobs:
 
@@ -21,20 +21,20 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           unrelated: true
-          #branch: other
+          branch: release
 
       - name: Write tag
         uses: tool3/publisher@v1
         with:
           npm_token: ${{ secrets.NPM_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          #branch: other
+          branch: release
           scope: "@tool3"
 
       - name: Create Release
         uses: alice-biometrics/release-creator/@v1.0.4
         with:
-          #branch: other
+          branch: release
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           version: inherit
-          description: inherit        
+          description: inherit
