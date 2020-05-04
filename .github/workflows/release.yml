@@ -31,10 +31,9 @@ jobs:
           branch: release
           scope: "@tool3"
 
-      - name: Create Release
-        uses: alice-biometrics/release-creator/@v1.0.4
-        with:
-          branch: release
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@master
+        env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-          version: inherit
-          description: inherit
+        with:
+          args: MyReleaseMessage
