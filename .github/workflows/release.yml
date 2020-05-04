@@ -1,0 +1,40 @@
+#trying
+name: release
+
+on:
+  push:
+    branches:
+      - other
+
+jobs:
+
+  tag:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - uses: actions/checkout@v2
+        
+      - name: Make tag
+        uses: tool3/bump@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          unrelated: true
+          branch: other
+
+      - name: Write tag
+        uses: tool3/publisher@v1
+        with:
+          npm_token: ${{ secrets.NPM_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: other
+          scope: "@tool3"
+
+      - name: Create Release
+        uses: alice-biometrics/release-creator/@v1.0.4
+        with:
+          branch: other
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          version: inherit
+          description: inherit        
