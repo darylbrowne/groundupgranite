@@ -1,6 +1,6 @@
 {
   "name": "granite",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Front-end library for rendering JSON into UI elements",
   "main": "js/block.js",
   "scripts": {
