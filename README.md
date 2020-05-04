@@ -57,6 +57,24 @@ The following core concepts constitute the foundation of development of all new 
 
 > **dictionary:** This concept is currently under reevaluation.
 
+---
+
+## Example (Optional)
+
+```javascript
+// code away!
+
+let generateProject = project => {
+  let code = [];
+  for (let js = 0; js < project.length; js++) {
+    code.push(js);
+  }
+};
+```
+
+---
+
+
 ##  Build Options
 
 You are free to use this project in its raw, uncompressed form by simply copying the files into your structure and following the documented patterns. However, if you are integrating Granite.js into a professional workflow, use the YAML file to build your Development, Stage, and Production environments. This repository's build folder contains the latest pipeline outputs from each of the below's latest run via our own CI/CD automation (that mirrors to GitHub from GitLab).
