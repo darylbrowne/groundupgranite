@@ -31,9 +31,8 @@ jobs:
           branch: release
           scope: "@tool3"
 
-      - name: Create a Release
-        uses: elgohr/Github-Release-Action@master
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        with:
-          args: MyReleaseMessage
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
