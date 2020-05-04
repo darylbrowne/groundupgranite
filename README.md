@@ -84,7 +84,6 @@ $ bower install
 
 ```javascript
 
-<script>
 import('https://darylbrowne.github.io/granite.js/js/tile.mjs')
 .then(module => {
     let json = {'hello' : 'world'};
@@ -94,7 +93,6 @@ import('https://darylbrowne.github.io/granite.js/js/tile.mjs')
     document.write(err.message);
 })
 .finally(function() { console.log('all done. clean up.'); });   
-</script>
 
 ```
 
