@@ -1,5 +1,5 @@
 // block.test.js
-const Person = require('../js/block');
+const Block = require('../js/block');
 test('Block constructs with a model and actual JSON', () => {
   let testBlock = new Block('modelJSON', 'actualJSON')
   expect(testBlock).toEqual({modelJSON: 'modelJSON', actualJSON: 'actualJSON'});
