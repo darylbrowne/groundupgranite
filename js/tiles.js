@@ -6,7 +6,11 @@ Author URI: https://addapptation.com/
 Version: G1.0.2
 Edited: April 21, 2020 - Bean
 ---------------------------------------------*/
+
+
 function tiles(jsonTiles) {
+    //throw new Error("Thrown from this granite slab()");
+    //return;
     var s = document.createElement("link");
     s.rel = "stylesheet";
     s.href = "https://cdn.addapptation.com/micros/tiles/g1/tiles.css";
@@ -487,4 +491,17 @@ function tileSearch() {
             t[i].style.display = "none";
         }
     }
+}
+
+
+function tile(json) {
+    try {
+        tiles(json);
+    } catch (e) {
+        throw e;
+    } finally {
+        console.log('tiles cleanup');
     }
+}
+
+export {tile as tile};
