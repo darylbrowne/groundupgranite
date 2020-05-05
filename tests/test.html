@@ -7,83 +7,89 @@
   </head>
   <body>
     <div id="a__795ea52dd5931d1108fb8382aad0c823"></div>
-    <script>
-      testJSON = {
-  id: "795ea52dd5931d1108fb8382aad0c823",
-  class: "a_custom",
-  options: {
-    title: "Header",
-    description: "Sed ut euismod velit, in tempus nunc. Morbi mollis, ante eget porttitor accumsan, justo elit fringilla metus, at aliquet purus sapien ut ex.",
-    style: "basic",
-    layout: "center",
-    theme: "custom",
-    header_color: "",
-    header_size: "medium",
-    description_color: "",
-    description_size: "medium",
-    height: "150px",
-    padding: "small",
-  },
-  records: [
-    {
-      "title": "New Hampshire",
-      description: "",
-      background_color: "orange",
-      background_image: "",
-      href: "https://addapptation.com/",
-      link_name: "",
-      center: false,
-      buttons: [{name: "View", href: "/cards?selection=view"}],
-      icon: "",
-      icon_color: "",
-      icon_size: "",
-      title_color: "",
-      title_size: "",
-      description_color: "",
-      description_size: "",
-      hover_color: "",
-      target: false,
-      classes: "a__record_class"
-    },
-    {
-      title: "Vermont",
-      description: "Donec sed urna at ligula maximus accumsan a tempor orci.",
-      background_color: "#333",
-      background_image: "https://picsum.photos/id/1002/400",
-      href: "https://addapptation.com/",
-      center: false,
-      icon: "fas fa-dog",
-      hover_color: "#333",
-      target: false,
-      classes: "a__record_class"
-    },
-    {
-      title: "California",
-      description: "Vivamus justo nisi, convallis id volutpat ac, aliquet non massa.",
-      backgroundColor: "#333",
-      background_image: "https://picsum.photos/id/1041/400",
-      padded_image: "",
-      href: "https://addapptation.com/",
-      icon: "fas fa-check",
-      target: false
-    },
-    {
-      title: "Maine",
-      description: "Donec sed urna at ligula maximus accumsan a tempor orci.",
-      backgroundColor: "#333",
-      background_image: "https://picsum.photos/id/1021/400",
-      href: "https://addapptation.com/",
-      link_name: "Button",
-      icon: "fas fa-dog",
-      target: false
-    }
-  ]
-};
-    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="../js/tiles.js"></script>
-    <script>tiles(testJSON);</script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script>
+    var tileJSON = {
+      id: "795ea52dd5931d1108fb8382aad0c823",
+      class: "a_custom",
+      options: {
+        title: "Header",
+        description: "Sed ut euismod velit, in tempus nunc. Morbi mollis, ante eget porttitor accumsan, justo elit fringilla metus, at aliquet purus sapien ut ex.",
+        style: "basic",
+        layout: "center",
+        theme: "custom",
+        header_color: "",
+        header_size: "medium",
+        description_color: "",
+        description_size: "medium",
+        height: "150px",
+        padding: "small",
+      },
+      records: [
+        {
+          "title": "New Hampshire",
+          description: "",
+          background_color: "orange",
+          background_image: "",
+          href: "https://addapptation.com/",
+          link_name: "",
+          center: false,
+          buttons: [{name: "View", href: "/cards?selection=view"}],
+          icon: "",
+          icon_color: "",
+          icon_size: "",
+          title_color: "",
+          title_size: "",
+          description_color: "",
+          description_size: "",
+          hover_color: "",
+          target: false,
+          classes: "a__record_class"
+        },
+        {
+          title: "Vermont",
+          description: "Donec sed urna at ligula maximus accumsan a tempor orci.",
+          background_color: "#333",
+          background_image: "https://picsum.photos/id/1002/400",
+          href: "https://addapptation.com/",
+          center: false,
+          icon: "fas fa-dog",
+          hover_color: "#333",
+          target: false,
+          classes: "a__record_class"
+        },
+        {
+          title: "California",
+          description: "Vivamus justo nisi, convallis id volutpat ac, aliquet non massa.",
+          backgroundColor: "#333",
+          background_image: "https://picsum.photos/id/1041/400",
+          padded_image: "",
+          href: "https://addapptation.com/",
+          icon: "fas fa-check",
+          target: false
+        },
+        {
+          title: "Maine",
+          description: "Donec sed urna at ligula maximus accumsan a tempor orci.",
+          backgroundColor: "#333",
+          background_image: "https://picsum.photos/id/1021/400",
+          href: "https://addapptation.com/",
+          link_name: "Button",
+          icon: "fas fa-dog",
+          target: false
+        }
+      ]
+    };
+  import('https://darylbrowne.github.io/groundupgranite/js/tiles.js')
+  .then(module => {
+      module.tile(tileJSON);
+  })
+  .catch(err => {
+      document.write(err.message);
+  })
+  .finally(function() { console.log(tileJSON); });    
+  </script>
   </body>
 </html>
