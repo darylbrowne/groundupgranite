@@ -1,76 +1,20 @@
 /*---------------------------------------------
 Theme Name: addapptation Tile Micro
-Theme URI: https://github.com/TeamAddapptation/PlatformDev/blob/master/public/assets/js/tile/addappter-tile.js
+Theme URI: https://cdn.addapptation.com/micros/tiles/g1/tiles.js
 Author: addapptation Dev Team
 Author URI: https://addapptation.com/
-Description: User has the ability and flexibly to add tiles of a various sizes that can link out and/or allow for hover effects.
-Version: 1.0
-Edited: April 8, 2020 - Bean
+Version: G1.0.2
+Edited: April 21, 2020 - Bean
 ---------------------------------------------*/
-// tiles(jsonTiles);
 function tiles(jsonTiles) {
-    console.log(jsonTiles);
-    var css = `
-.a__no-records{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    color: #BFBFBF;
-    height: 225px;
-    margin-top: 50px;
-    border: 2px dashed #707070; 
-  }
-
-  /* Main Structure */
-  /* .a__tile_container{
-    padding: 20px;
-  } */
-  .a__tile_wrapper .row {
-    margin-right: 0;
-    margin-left: 0; 
-  }
-  .a__tile_wrapper .a__tile_container .a__basic_tile {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-size: cover;
-    background-position: center center;
-    cursor: pointer;
-    overflow: hidden;
-    }
-  /* Overlays */
-  .a__basic_tile.a__filters:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .6;
-  }
-  .a__basic_tile.a__filters:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .6;
-  }`;
-
-    head = document.head || document.getElementsByTagName('head')[0];
-    styleBlock = document.createElement('style');
-    styleBlock.type = 'text/css';
-    styleBlock.appendChild(document.createTextNode(css));
-    document.head.appendChild(styleBlock);
-    
+    var s = document.createElement("link");
+    s.rel = "stylesheet";
+    s.href = "https://cdn.addapptation.com/micros/tiles/g1/tiles.css";
+    document.head.appendChild(s);
     /*---------------------------------------------
     Global Variables
     ---------------------------------------------*/
     var json = jsonTiles;
-    console.log(json);
     var addappterID = json['id'];
     var cssID = ".a__" + addappterID;
     var options = json['options'];
@@ -95,7 +39,6 @@ function tiles(jsonTiles) {
             "title" : ["a__tile_body", "text-center"]
         }
       };
-      
     /*---------------------------------------------
     User Generated CSS
     ---------------------------------------------*/
@@ -365,11 +308,13 @@ function tiles(jsonTiles) {
     }
     function tileBkg(o, r){
         if(r.background_image){
-            return `background-image: url(${r.background_image});"`;
+            return `background-image: url(${r.background_image});`;
         } else if (r.background_color){
-            return `background-color:${r.background_color};"`;
+            return `background-color:${r.background_color};`;
+        } else if (!r.background_color && !r.background_image){
+            return `background-color:transparent;`;
         } else if (!r.title && !r.description && !r.icon ) {
-            return `background-color: #ffffff; box-shadow: 0px 3px 6px #00000029;"`;
+            return `background-color: #ffffff; box-shadow: 0px 3px 6px #00000029;`;
         }
     }
     function title(o, r){
@@ -390,11 +335,13 @@ function tiles(jsonTiles) {
     function filters(r){
         return ((!r.title && !r.description) && !r.icon) ? "" : "a__filters";
     }
-    
+    function hover(r){
+        return r.description ? "hover" : "noHover";
+    }
     /*---------------------------------------------
     Container Build
     ---------------------------------------------*/
-    function tileMicro(o, r){
+    (function tileMicro(o, r){
             var wrapper = createElement("div", {
                 "class": `${strClass("micro", "container")} a__${addappterID}`
             });
@@ -448,8 +395,7 @@ function tiles(jsonTiles) {
             document.body.appendChild(target);
         }
         document.getElementById(addappterID).appendChild(wrapper);
-    }
-
+    })(options, records);
     /*---------------------------------------------
     Record Build
     ---------------------------------------------*/
@@ -459,7 +405,7 @@ function tiles(jsonTiles) {
             case "icon":
                 return `${showIcon(o, r)}
                         <div class="a__tile_body">
-                            <div class="a__tile_header">
+                            <div class="a__tile_header ${hover(r)}">
                                 ${title(o, r)}
                             </div>
                                 ${description(o, r)}
@@ -470,7 +416,6 @@ function tiles(jsonTiles) {
             break;
           }
     }
-    tileMicro(options, records);
 /*---------------------------------------------
 Show More Button
 ---------------------------------------------*/
