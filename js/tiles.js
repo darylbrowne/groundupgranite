@@ -453,7 +453,7 @@ Action Row
   
     `;
 
-    head = document.head || document.getElementsByTagName('head')[0],
+    head = document.head || document.getElementsByTagName('head')[0];
     styleBlock = document.createElement('style');
     styleBlock.type = 'text/css';
     styleBlock.appendChild(document.createTextNode(css));
