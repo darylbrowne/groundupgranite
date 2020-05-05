@@ -2,14 +2,13 @@
 
 ![CI](https://github.com/darylbrowne/granite.js/workflows/CI/badge.svg) ![Generated Button](https://raw.githubusercontent.com/darylbrowne/granite.js/image-data/badge.svg) ![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)
 
-Granite.js is a front-end component library for rendering formatted JSON as PWA-ready DOM elements.
+Granite.js is a front-end component library from addapptation, built to render formatted JSON as PWA-ready DOM elements.
 
-The word "granite" comes from the Latin word, _granum_, meaning grain. A nod to both where it was created (New Hampshire, USA - also known as _The Granite State_), as well as to how it approaches data rendering. Each _block_ of granite.js creates a self-contained chunk of HTML, CSS, and JS that can be late-loaded into any front-end enviroment - yes, even inside your existing Vue, React, or Angular project!
+The word "granite" comes from the Latin word, _granum_, meaning grain. A nod to both where it was created (New Hampshire, USA - also known as _The Granite State_), as well as to how (rock solidly) it renders data. Each _block_ of granite.js creates a self-contained chunk of HTML, CSS, and JS that can be late-loaded into any front-end enviroment - yes, even inside your existing Vue, React, or Angular project!
 
 ## Granite.js Life Cycle
 
 A block is called via a dynamically-imported JavaScript Promise and is then invoked with a call that includes the required JSON. 
-And this will produce a flow chart:
 
 ```mermaid
 graph LR
@@ -20,19 +19,6 @@ A --> D(Helper JS)
 B --> E{UI}
 C --> E
 D --> E
-```
-A block is called via a dynamically-imported JavaScript Promise and is then invoked with a call that includes the required JSON. 
-And this will produce a flow chart:
-
-
-```mermaid
-sequenceDiagram
-JS ->> CSS: CSS Variables 
-CSS-->>HTML: Design Framework
-CSS-> HTML: Theme, then Block
-Note right of HTML: Helper functions<br/>are block-enclosed.
-JS->HTML: Write Semantic Markup
-JS-->HTML: Include Helper Functions
 ```
 
 # Foundations
@@ -58,12 +44,11 @@ The following core concepts constitute the foundation of development of all new 
 > **dictionary:** This concept is currently under reevaluation.
 
 
-
 ### Setup
 
-- If you want more syntax highlighting, format your code like this:
+- Once you have a local copy of Granite.js, open a terminal window in that directory and be sure you have a current version of npm running.
 
-> update and install this package first
+> install/update npm
 
 ```shell
 $ brew update
