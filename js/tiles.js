@@ -9,6 +9,7 @@ Edited: April 8, 2020 - Bean
 ---------------------------------------------*/
 // tiles(jsonTiles);
 function tiles(jsonTiles) {
+    console.log(jsonTiles);
     var css = `
 /*---------------------------------------------
 No Records
@@ -463,6 +464,7 @@ Action Row
     Global Variables
     ---------------------------------------------*/
     var json = jsonTiles;
+    console.log(json);
     var addappterID = json['id'];
     var cssID = ".a__" + addappterID;
     var options = json['options'];
