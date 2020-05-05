@@ -504,4 +504,4 @@ function tile(json) {
     }
 }
 
-export {tile as tile};
+export {* as tilesMicro};
