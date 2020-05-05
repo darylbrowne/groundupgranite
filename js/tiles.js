@@ -450,9 +450,7 @@ Action Row
       width: 100%;
   }
 
-  }
-  
-    `;
+  }`;
 
     head = document.head || document.getElementsByTagName('head')[0];
     styleBlock = document.createElement('style');
