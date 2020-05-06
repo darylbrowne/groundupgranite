@@ -51,15 +51,14 @@ The following core concepts constitute the foundation of development of all new 
 > install/update npm
 
 ```shell
-$ brew update
-$ brew install fvcproductions
+$ npm install npm@latest -g
 ```
 
-> now install npm and bower packages
+> install granite.js packages
 
 ```shell
+$ cd [your local granite.js project]
 $ npm install
-$ bower install
 ```
 
 
