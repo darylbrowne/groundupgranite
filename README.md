@@ -17,9 +17,7 @@ Your server-side logic writes a DOM element with a unique _id_ and a _data-grani
 
 The following foundational factors go in to developing and extending Granite.js: 
 
-> **No-Compile Solution:** Granite.js requires one standardized JSON object and generates an immediately usable component, with no need for a compile step between receiving data and rendering results. To this end, we use CSS Variables instead of SASS.
-
-> **A 3-Line Promise:** Granite.js uses ES5 Promises to invoke a UI block, so it should take no more than 3 short lines of code to have a bulletproof rendering solution, whether via CDN or locally. 
+> **Run-Time Solution:** Granite.js requires one standardized JSON object and generates an immediately usable component, with no need for a compile step between receiving data and rendering results. To this end, we use CSS Variables instead of SASS.
 
 > **One Flavor - Vanilla:** Granite.js is based on the best of breed usage of HTML, CSS, and JavaScript. To keep everything as atomic as possible, Granite.js leverages the native strengths of each language or protocol with no special flavors except vanilla. 
 
@@ -56,19 +54,18 @@ $ npm install
 
 ---
 
-## Example (Optional)
+## Granite.js Syntax
 
-```javascript
+```html
 
-import('https://darylbrowne.github.io/granite.js/js/tile.mjs')
-.then(module => {
-    let json = {'hello' : 'world'};
-    module.tile(json);
-})
-.catch(err => {
-    document.write(err.message);
-})
-.finally(function() { console.log('all done. clean up.'); });   
+<div id='myTiles' 
+     data-granite='{
+                        "id" : "myTiles", 
+                        "options": "...",
+                        "records": "...",
+                   }'></div>
+
+<script src="granite.js"></script>
 
 ```
 
