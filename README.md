@@ -1,7 +1,6 @@
 # Granite.js
 
-![CI](https://github.com/darylbrowne/granite.js/workflows/CI/badge.svg) ![Generated Button](https://raw.githubusercontent.com/darylbrowne/granite.js/image-data/badge.svg) ![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+![CI](https://github.com/darylbrowne/granite.js/workflows/CI/badge.svg) ![Generated Button](https://raw.githubusercontent.com/darylbrowne/granite.js/image-data/badge.svg) ![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square) [![Anaconda-Server Badge](https://anaconda.org/anaconda/brotli/badges/version.svg)](https://anaconda.org/anaconda/brotli) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 Granite.js is a front-end component library from addapptation, built to render formatted JSON as PWA-ready DOM elements.
 
