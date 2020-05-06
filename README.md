@@ -27,7 +27,7 @@ The following foundational factors go in to developing and extending Granite.js:
 
 The following core concepts constitute the foundation of development of all new and existing _blocks_ of Granite.js 
 
-> **block:** a Granite.js UI element is referred to as a block, and consists of an HTML tag with an _id_ and a _data-granite_ attribute.
+> **block:** a Granite.js UI element is called a block, and consists of an HTML tag with an _id_ and a _data-granite_ attribute.
 
 > **theme:** Granite.js offers global and/or block-level styling via JSON.
 
