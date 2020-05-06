@@ -72,17 +72,15 @@ $ npm install
 ---
 
 
-##  Build Options
+##  Workflows (Build Options)
 
 You are free to use this project in its raw, uncompressed form by simply forking the repository. However, if you are integrating Granite.js into a professional workflow, we recommend using the YAML file to build your Development, Stage, and Production environments. This repository's release branch contains the latest, documented stable from each of the below's latest run via our own CI/CD automation (that mirrors to GitHub from GitLab). Finally, there are regular Releases available for each stable release commit. Refer to the repository for additional notes. 
 
-- **Development**: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- **Stage**: publish the file converted to HTML via a Handlebars template (on a blog for example).
-- **Production**: publish the file converted to HTML via a Handlebars template (on a blog for example).
+- **Development**: Continuous Integration build process runs jest tests and file compression on every commit
+- **Stage**: Continuous Deployment creates semantic versioned releases 
+- **Production**: Integrate with GitHub Actions to populate a CDN and/or pull releases
 
 ## Releases
-
-While the Granite.js repository is always available for you to clone and/or compile for your own specific needs, our CI/CD pipeline also builds nightly releases available in the _build_ folder of the root directory here. 
 
 |                |Features                          |Date                         |
 |----------------|-------------------------------|-----------------------------|
