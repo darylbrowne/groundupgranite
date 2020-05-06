@@ -76,6 +76,12 @@ $ npm install
 
 You are free to use this project in its raw, uncompressed form by simply forking the repository. However, if you are integrating Granite.js into a professional workflow, we recommend using the YAML file to build your Development, Stage, and Production environments. This repository's release branch contains the latest, documented stable from each of the below's latest run via our own CI/CD automation (that mirrors to GitHub from GitLab). Finally, there are regular Releases available for each stable release commit. Refer to the repository for additional notes. 
 
+> Remember to _run test_ before you merge changes upstream,
+
+```shell
+$ run test
+```
+
 - **Development**: Continuous Integration build process runs jest tests and file compression on every commit
 - **Stage**: Continuous Deployment creates semantic versioned releases 
 - **Production**: Integrate with GitHub Actions to populate a CDN and/or pull releases
