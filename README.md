@@ -1,6 +1,7 @@
 # Granite.js
 
 ![CI](https://github.com/darylbrowne/granite.js/workflows/CI/badge.svg) ![Generated Button](https://raw.githubusercontent.com/darylbrowne/granite.js/image-data/badge.svg) ![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 Granite.js is a front-end component library from addapptation, built to render formatted JSON as PWA-ready DOM elements.
 
@@ -8,18 +9,10 @@ The word "granite" comes from the Latin word, _granum_, meaning grain. A nod to 
 
 ## Granite.js Life Cycle
 
-A block is called via a dynamically-imported JavaScript Promise and is then invoked with a call that includes the required JSON. 
+Your page includes a reference to your version of _granite.js_ 
+Your server-side logic writes a DOM element with a unique _id_ and a _data-granite_ attribute containing the JSON required for the desired UI element, or _block of granite_.
 
-```mermaid
-graph LR
-X[import via Promise] --> A
-A[then generate] --> B((CSS))
-A --> C(HTML)
-A --> D(Helper JS)
-B --> E{UI}
-C --> E
-D --> E
-```
+
 
 # Foundations
 
