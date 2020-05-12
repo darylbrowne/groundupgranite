@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Micro Tester</title>
+</head>
+<script>
+var paramsString = window.location.search;
+var searchParams = new URLSearchParams(paramsString);
+
+for (let p of searchParams.getAll("test")) {
+	console.log(p);
+	import(`${p}.js`)
+		.then(x => x.test());
+}	
+
+
+</script>
+<body>
+</body>
+</html>
