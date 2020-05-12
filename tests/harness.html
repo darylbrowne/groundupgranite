@@ -8,7 +8,7 @@ var searchParams = new URLSearchParams(paramsString);
 
 for (let p of searchParams.getAll("test")) {
 	console.log(p);
-	import(`${p}.js`)
+	import(`./${p}.js`)
 		.then(x => x.test());
 }	
 
